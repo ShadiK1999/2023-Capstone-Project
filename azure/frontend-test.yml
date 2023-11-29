@@ -1,0 +1,78 @@
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - frontend
+      - azure/frontend-test.yml
+pool:
+  name: Default
+
+variables:
+  pnpm_config_cache: $(Pipeline.Workspace)/.pnpm-store
+  working_dir: $(Agent.BuildDirectory)/s/frontend/
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '16.x'
+      displayName: 'Install Node.js'
+  
+  - task: Cache@2
+    inputs:
+      key: 'pnpm | "$(Agent.OS)" | $(working_dir)pnpm-lock.yaml'
+      path: $(pnpm_config_cache)
+    displayName: Cache pnpm
+
+  - script: |
+      corepack enable
+      corepack prepare pnpm@latest-8 --activate
+      pnpm config set store-dir $(pnpm_config_cache)
+    displayName: "Setup pnpm"
+
+  - script: |
+      pnpm install --frozen-lockfile
+    displayName: "Install dependencies"
+    workingDirectory: $(working_dir)
+
+  - script: |
+      pnpm lint
+    displayName: "Lint check"
+    workingDirectory: $(working_dir)
+
+  - script: |
+      pnpm compile
+    displayName: "Typescript compile check"
+    workingDirectory: $(working_dir)
+
+  - script: |
+      pnpm run test
+    displayName: "Run unit tests"
+    workingDirectory: $(working_dir)
+    continueOnError: true # Test failures should be published before failing the build
+
+  - script: |
+      pnpm run coverage
+    displayName: "Creating code coverage"
+    workingDirectory: $(working_dir)
+    continueOnError: true
+    
+  - task: PublishTestResults@2
+    displayName: 'Publish Unit Test Results'
+    inputs:
+      testResultsFiles: $(working_dir)junit.xml
+      mergeTestResults: true
+      testRunTitle: 'Jest Unit Tests'
+      failTaskOnFailedTests: true
+  
+  - task: UseDotNet@2
+    displayName: Set up .NET 7.0
+    inputs:
+      version: 7.x
+
+  - task: PublishCodeCoverageResults@1
+    displayName: Publish Code Coverage Results
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: $(working_dir)coverage/cobertura-coverage.xml

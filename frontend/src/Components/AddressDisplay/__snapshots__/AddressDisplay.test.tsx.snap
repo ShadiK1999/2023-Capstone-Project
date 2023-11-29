@@ -1,0 +1,210 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Vitest Snapshot testing suite > Matches DOM Snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <table
+        class="fpn0tq5"
+      >
+        <thead>
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              Address
+            </th>
+            <th>
+              Status
+            </th>
+            <th>
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Address 1
+            </td>
+            <td>
+              1 elizabeth street, melbourne
+            </td>
+            <td>
+              <span
+                class="fs9pw6x"
+              >
+                <svg
+                  fill="none"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  width="22"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="11"
+                    cy="11"
+                    fill="#1FE86F"
+                    r="11"
+                  />
+                </svg>
+                <div>
+                  Verified
+                </div>
+              </span>
+            </td>
+            <td>
+              <div
+                class="f148jglm"
+              >
+                <button
+                  class="fiwmq2y"
+                >
+                  <img
+                    src="/src/Components/AddressDisplay/Assets/Eye.svg"
+                  />
+                </button>
+                <button
+                  class="fiwmq2y"
+                >
+                  <img
+                    src="/src/Components/AddressDisplay/Assets/Edit.svg"
+                  />
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>,
+  "container": <div>
+    <table
+      class="fpn0tq5"
+    >
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Address
+          </th>
+          <th>
+            Status
+          </th>
+          <th>
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Address 1
+          </td>
+          <td>
+            1 elizabeth street, melbourne
+          </td>
+          <td>
+            <span
+              class="fs9pw6x"
+            >
+              <svg
+                fill="none"
+                height="22"
+                viewBox="0 0 22 22"
+                width="22"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  fill="#1FE86F"
+                  r="11"
+                />
+              </svg>
+              <div>
+                Verified
+              </div>
+            </span>
+          </td>
+          <td>
+            <div
+              class="f148jglm"
+            >
+              <button
+                class="fiwmq2y"
+              >
+                <img
+                  src="/src/Components/AddressDisplay/Assets/Eye.svg"
+                />
+              </button>
+              <button
+                class="fiwmq2y"
+              >
+                <img
+                  src="/src/Components/AddressDisplay/Assets/Edit.svg"
+                />
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,0 +1,23 @@
+version: "3.9"
+
+# This config is only applied when running in development.
+
+services:
+  db:
+    ports:
+      - "5306:3306"
+  frontend:
+    build:
+      target: dev
+    volumes:
+      - ./frontend/src:/source/src:rw
+  api:
+    build:
+      target: dev
+    volumes:
+      - ./api/ApiSource:/source:rw
+      - /source/obj
+      - /source/bin
+  proxy:
+    ports:
+      - "5000:80"

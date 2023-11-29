@@ -1,0 +1,16 @@
+version: "3.9"
+name: "sep55-api-jmeter"
+
+services:
+  api:
+    build:
+      context: ..
+      target: prod
+  jmeter:
+    image: justb4/jmeter
+    command: -n -Jjmeter.save.saveservice.assertions=true -t/etc/jmeter/testplan.jmx -l/etc/jmeter/target/output.log
+    volumes:
+      - ./testplan.jmx:/etc/jmeter/testplan.jmx
+      - ./target:/etc/jmeter/target
+    depends_on:
+      - api

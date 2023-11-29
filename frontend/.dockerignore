@@ -1,0 +1,28 @@
+# config files
+.github/
+.husky/
+.jest/
+.vscode/
+.editorconfig
+.eslintrc.cjs
+.git
+.gitignore
+.dockerignore
+.eslintignore
+.prettierignore
+.prettierrc.json
+Dockerfile
+Dockerfile.prod
+docker-compose.yml
+jest.config.cjs
+junit.xml
+coverage/
+
+# documentation
+LICENSE
+CHANGELOG.md
+README.md
+
+# build files
+node_modules/
+dist/

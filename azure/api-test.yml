@@ -1,0 +1,57 @@
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - api
+      - azure/api-test.yml
+
+pool:
+  name: Default
+
+variables:
+  solution: api/TrustedNeighbourApi.sln
+  solutionFolder: api
+  testProject: api/ApiTest/ApiTest.csproj
+  testSettings: api/coverlet.runsettings
+  buildConfiguration: Release
+
+steps:
+- task: UseDotNet@2
+  name: setup
+  displayName: Set up .NET 7.0
+  inputs:
+    version: 7.x
+
+- task: DotNetCoreCLI@2
+  name: build
+  displayName: Build solution
+  inputs:
+    command: build
+    projects: $(solution)
+
+- task: DotNetCoreCLI@2
+  name: format
+  displayName: Format code
+  inputs:
+    command: custom
+    custom: format
+    arguments: --verify-no-changes
+    workingDirectory: $(solutionFolder)
+
+- task: DotNetCoreCLI@2
+  name: test
+  displayName: Run tests
+  inputs:
+    command: test
+    arguments: --collect:"XPlat Code Coverage" --settings $(testSettings)
+    projects: $(testProject)
+    publishTestResults: true
+
+- task: PublishCodeCoverageResults@1
+  name: coverage
+  displayName: Publish code coverage report
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: $(Agent.TempDirectory)/**/coverage.cobertura.xml

@@ -1,0 +1,12 @@
+version: "3.9"
+
+# This config is only applied when running in production.
+
+services:
+  proxy:
+    ports:
+      - "80:80"
+  api:
+    environment:
+      TRUSTEDNEIGHBOUR_JwtConfig__Issuer: sep.local
+      TRUSTEDNEIGHBOUR_JwtConfig__Audience: sep.local

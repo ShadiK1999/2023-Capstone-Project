@@ -1,0 +1,344 @@
+{
+  "points": [
+    {
+      "location_code": "69008641_UPL",
+      "partner_code": "AP",
+      "name": "Hawthorn Parcel Locker",
+      "type": "UPL",
+      "directions": "Parcel Locker is located at on front verandah to the right of the Post Office entrance",
+      "description": "Available 24/7",
+      "address": {
+        "address_line_1": "208 Riversdale Road",
+        "suburb": "HAWTHORN",
+        "state": "VIC",
+        "postcode": "3122",
+        "country_name": "Australia",
+        "country_code": "AU"
+      },
+      "geo_location": {
+        "lat": -37.829866,
+        "lon": 145.043293,
+        "distance": 0.9681946625205292
+      },
+      "delivery_point_id": 69008641,
+      "work_centre_id": 354757,
+      "hours": [
+        {
+          "type": "HOURS",
+          "weekday": "0",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "1",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "2",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "3",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "4",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "5",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "6",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        }
+      ],
+      "service_codes": []
+    },
+    {
+      "location_code": "35848694_UPL",
+      "partner_code": "AP",
+      "name": "Woolworths Hawthorn East Parcel Locker",
+      "type": "UPL",
+      "directions": "Parcel locker is located near the Woolworths store",
+      "description": "Available 24/7",
+      "address": {
+        "address_line_1": "742 Toorak Road",
+        "suburb": "HAWTHORN EAST",
+        "state": "VIC",
+        "postcode": "3123",
+        "country_name": "Australia",
+        "country_code": "AU"
+      },
+      "geo_location": {
+        "lat": -37.845662,
+        "lon": 145.041913,
+        "distance": 2.6607382822042527
+      },
+      "delivery_point_id": 35848694,
+      "work_centre_id": 360954,
+      "hours": [
+        {
+          "type": "HOURS",
+          "weekday": "0",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "1",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "2",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "3",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "4",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "5",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "6",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        }
+      ],
+      "service_codes": []
+    },
+    {
+      "location_code": "90695406_UPL",
+      "partner_code": "AP",
+      "name": "Deepdene Parcel Locker",
+      "type": "UPL",
+      "directions": "Parcel Locker is in carpark adjacent to Post Office Boxes",
+      "description": "Available 24/7",
+      "address": {
+        "address_line_1": "106 Whitehorse Road",
+        "suburb": "DEEPDENE",
+        "state": "VIC",
+        "postcode": "3103",
+        "country_name": "Australia",
+        "country_code": "AU"
+      },
+      "geo_location": {
+        "lat": -37.811227,
+        "lon": 145.066298,
+        "distance": 2.6710036124791037
+      },
+      "delivery_point_id": 90695406,
+      "work_centre_id": 357050,
+      "hours": [
+        {
+          "type": "HOURS",
+          "weekday": "0",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "1",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "2",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "3",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "4",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "5",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "6",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        }
+      ],
+      "service_codes": []
+    },
+    {
+      "location_code": "86242319_UPL",
+      "partner_code": "AP",
+      "name": "Toorak Parcel Locker",
+      "type": "UPL",
+      "directions": "Parcel Locker is located outside main entrance to Post Shop ",
+      "description": "Available 24x7",
+      "address": {
+        "address_line_1": "464 Toorak Rd",
+        "suburb": "TOORAK",
+        "state": "VIC",
+        "postcode": "3142",
+        "country_name": "Australia",
+        "country_code": "AU"
+      },
+      "geo_location": {
+        "lat": -37.84144233,
+        "lon": 145.01004358,
+        "distance": 3.349925332334976
+      },
+      "delivery_point_id": 86242319,
+      "work_centre_id": 355805,
+      "hours": [
+        {
+          "type": "HOURS",
+          "weekday": "0",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "1",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "2",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "3",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "4",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "5",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "6",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        }
+      ],
+      "service_codes": []
+    },
+    {
+      "location_code": "95319345_UPL",
+      "partner_code": "AP",
+      "name": "Kew East BP Parcel Locker",
+      "type": "UPL",
+      "directions": "Parcel Locker is located against the left hand side BP shop wall opposite the vacuum bays",
+      "description": "Available 24/7",
+      "address": {
+        "address_line_1": "1399 Burke Road",
+        "suburb": "KEW EAST",
+        "state": "VIC",
+        "postcode": "3102",
+        "country_name": "Australia",
+        "country_code": "AU"
+      },
+      "geo_location": {
+        "lat": -37.794722,
+        "lon": 145.063255,
+        "distance": 3.6910207942243702
+      },
+      "delivery_point_id": 95319345,
+      "work_centre_id": 357157,
+      "hours": [
+        {
+          "type": "HOURS",
+          "weekday": "0",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "1",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "2",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "3",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "4",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "5",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        },
+        {
+          "type": "HOURS",
+          "weekday": "6",
+          "start_time": "00:00",
+          "end_time": "23:59:59"
+        }
+      ],
+      "service_codes": []
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+﻿{
+  "points": [
+    {
+      "location_code": "69008641_UPL",
+      "partner_code": "AP",
+      "name": "Hawthorn Parcel Locker",
+      "type": "UPL",
+      "directions": "Parcel Locker is located at on front verandah to the right of the Post Office entrance",
+      "description": "Available 24/7",
+      "address": {
+        "address_line_1": "208 Riversdale Road",
+        "suburb": "HAWTHORN",
+        "state": "VIC",
+        "postcode": "3122",
+        "country_name": "Australia",
+        "country_code": "AU"
+      },
+      "geo_location": {
+        "lat": -37.829866,
+        "lon": 145.043293,
+        "distance": 0.9681946625205292
+      },
+      "delivery_point_id": 69008641,
+      "work_centre_id": 354757,
+      "hours": [
+        {
+          "type": "HOURS",
+          "weekday": "0",
+          "start_time": "abc",
+          "end_time": ""
+        }
+      ],
+      "service_codes": []
+    }
+  ]
+}

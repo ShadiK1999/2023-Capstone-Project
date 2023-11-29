@@ -1,0 +1,216 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Matches DOM Snapshot > Matches DOM Snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="f1vzetsa"
+      >
+        <p>
+          Open from
+        </p>
+        <div
+          class="f1nym8no"
+        >
+          <div
+            class="f723edx"
+          >
+            <div
+              class="f2ey5g1"
+            >
+              <img
+                alt="MINUS"
+                src="/src/Components/Filter/PlusMinusButton/Assets/Minus.svg"
+              />
+            </div>
+            <div
+              class="f1sz7xol"
+            >
+              09
+              :
+              00
+            </div>
+            <div
+              class="f1fozamg"
+            >
+              <img
+                alt="PLUS"
+                src="/src/Components/Filter/PlusMinusButton/Assets/Plus.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="f1vzetsa"
+      >
+        <p>
+          Open until
+        </p>
+        <div
+          class="f1nym8no"
+        >
+          <div
+            class="f723edx"
+          >
+            <div
+              class="f2ey5g1"
+            >
+              <img
+                alt="MINUS"
+                src="/src/Components/Filter/PlusMinusButton/Assets/Minus.svg"
+              />
+            </div>
+            <div
+              class="f1sz7xol"
+            >
+              17
+              :
+              00
+            </div>
+            <div
+              class="f1fozamg"
+            >
+              <img
+                alt="PLUS"
+                src="/src/Components/Filter/PlusMinusButton/Assets/Plus.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="f1vzetsa"
+    >
+      <p>
+        Open from
+      </p>
+      <div
+        class="f1nym8no"
+      >
+        <div
+          class="f723edx"
+        >
+          <div
+            class="f2ey5g1"
+          >
+            <img
+              alt="MINUS"
+              src="/src/Components/Filter/PlusMinusButton/Assets/Minus.svg"
+            />
+          </div>
+          <div
+            class="f1sz7xol"
+          >
+            09
+            :
+            00
+          </div>
+          <div
+            class="f1fozamg"
+          >
+            <img
+              alt="PLUS"
+              src="/src/Components/Filter/PlusMinusButton/Assets/Plus.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="f1vzetsa"
+    >
+      <p>
+        Open until
+      </p>
+      <div
+        class="f1nym8no"
+      >
+        <div
+          class="f723edx"
+        >
+          <div
+            class="f2ey5g1"
+          >
+            <img
+              alt="MINUS"
+              src="/src/Components/Filter/PlusMinusButton/Assets/Minus.svg"
+            />
+          </div>
+          <div
+            class="f1sz7xol"
+          >
+            17
+            :
+            00
+          </div>
+          <div
+            class="f1fozamg"
+          >
+            <img
+              alt="PLUS"
+              src="/src/Components/Filter/PlusMinusButton/Assets/Plus.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

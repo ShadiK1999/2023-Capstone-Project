@@ -1,0 +1,17 @@
+trigger:
+  branches:
+    include:
+      - '*'
+
+pool:
+  name: Default
+
+steps:
+- task: swellaby.mirror-git-repository.mirror-git-repository-vsts-task.mirror-git-repository-vsts-task@1
+  displayName: Mirror Git repository to $(destinationRepo)
+  inputs:
+    sourceGitRepositoryUri: $(sourceRepo)
+    sourceGitRepositoryPersonalAccessToken: $(sourcePAT)
+    destinationGitRepositoryUri: $(destinationRepo)
+    destinationGitRepositoryPersonalAccessToken: $(destinationPAT)
+

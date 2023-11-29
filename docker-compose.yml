@@ -1,0 +1,69 @@
+version: "3.9"
+name: "sep55"
+
+# This is the base configuration for the Docker container system. It is overridden
+# for different environments in docker-compose.override.yml (development) and
+# docker-compose.prod.yml (production).
+
+services:
+  db:
+    platform: linux/amd64
+    build:
+      context: ./db
+    volumes:
+      - db-data:/var/lib/mysql:rw
+    environment:
+      MYSQL_DATABASE: trustedneighbour
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
+    secrets:
+      - db_api_password
+      - db_root_password
+    healthcheck:
+      test: /healthcheck.sh
+      start_period: 100s
+      start_interval: 5s
+      interval: 10s
+  frontend:
+    build:
+      context: ./frontend
+      target: prod
+    healthcheck:
+      test: curl -f -LI http://localhost
+      start_period: 30s
+      start_interval: 3s
+      interval: 10s
+  api:
+    build:
+      context: ./api
+      target: prod
+    secrets:
+      - source: db_api_connection_string
+        target: ConnectionStrings__NeighbourDb
+      - source: jwt_secret
+        target: JwtConfig__Secret
+    healthcheck:
+      test: curl -f -L http://localhost/debug
+      start_period: 40s
+      start_interval: 3s
+      interval: 10s
+  proxy:
+    build:
+      context: ./proxy
+    depends_on:
+      api:
+        condition: service_healthy
+      frontend:
+        condition: service_healthy
+
+secrets:
+  db_api_connection_string:
+    file: secrets/db_api_connection_string.txt
+  db_api_password:
+    file: secrets/db_api_password.txt
+  db_root_password:
+    file: secrets/db_root_password.txt
+  jwt_secret:
+    file: secrets/jwt_secret.txt
+
+volumes:
+  db-data:

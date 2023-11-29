@@ -1,0 +1,132 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Jest Snapshot testing suite > Matches DOM Snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="f15xc0c0"
+      >
+        <div
+          class="fd0po6u"
+        >
+          <div
+            class="faas34w"
+          >
+            <div
+              class="ffdmr56"
+            >
+              Trusted Neighbour
+            </div>
+          </div>
+          <div
+            class="fwliuvo"
+          >
+            <button
+              class="f1ewxqep"
+            >
+              Login
+            </button>
+            <button
+              class="f1ewxqep"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+        <div
+          class="f1uk9lh"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="f15xc0c0"
+    >
+      <div
+        class="fd0po6u"
+      >
+        <div
+          class="faas34w"
+        >
+          <div
+            class="ffdmr56"
+          >
+            Trusted Neighbour
+          </div>
+        </div>
+        <div
+          class="fwliuvo"
+        >
+          <button
+            class="f1ewxqep"
+          >
+            Login
+          </button>
+          <button
+            class="f1ewxqep"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+      <div
+        class="f1uk9lh"
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

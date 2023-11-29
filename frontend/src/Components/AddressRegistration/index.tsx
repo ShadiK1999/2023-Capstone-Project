@@ -1,0 +1,1 @@
+export { AddressRegistrationModal } from './AddressRegistrationModal';

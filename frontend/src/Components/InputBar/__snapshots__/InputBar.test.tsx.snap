@@ -1,0 +1,186 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Input Bar > Matches DOM Snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="f19zfv1w"
+      >
+        <div
+          class="f1uykmd3"
+        >
+          <div
+            class="f1j2d254"
+          >
+            <img
+              src="/src/Components/InputBar/AddressInput/Assets/SearchIcon.svg"
+            />
+          </div>
+          <div
+            class=""
+          >
+            <input
+              class="figqh77"
+              placeholder="Find address"
+            />
+          </div>
+        </div>
+        <div
+          class="f1mgyl9u"
+        >
+          <div
+            class="f723edx"
+          >
+            <div
+              class="f2ey5g1"
+            >
+              <img
+                alt="FILTER"
+                src="/src/Components/Filter/PlusMinusButton/Assets/Filter.svg"
+              />
+            </div>
+            <div
+              class="f1sz7xol"
+            >
+              <div
+                class="f1vjmc79"
+              >
+                walking 5 min
+              </div>
+            </div>
+            <div
+              class="f1fozamg"
+            >
+              <img
+                alt="PLUS"
+                src="/src/Components/Filter/PlusMinusButton/Assets/Plus.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          class="f1ewxqep"
+        >
+          Search
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="f19zfv1w"
+    >
+      <div
+        class="f1uykmd3"
+      >
+        <div
+          class="f1j2d254"
+        >
+          <img
+            src="/src/Components/InputBar/AddressInput/Assets/SearchIcon.svg"
+          />
+        </div>
+        <div
+          class=""
+        >
+          <input
+            class="figqh77"
+            placeholder="Find address"
+          />
+        </div>
+      </div>
+      <div
+        class="f1mgyl9u"
+      >
+        <div
+          class="f723edx"
+        >
+          <div
+            class="f2ey5g1"
+          >
+            <img
+              alt="FILTER"
+              src="/src/Components/Filter/PlusMinusButton/Assets/Filter.svg"
+            />
+          </div>
+          <div
+            class="f1sz7xol"
+          >
+            <div
+              class="f1vjmc79"
+            >
+              walking 5 min
+            </div>
+          </div>
+          <div
+            class="f1fozamg"
+          >
+            <img
+              alt="PLUS"
+              src="/src/Components/Filter/PlusMinusButton/Assets/Plus.svg"
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        class="f1ewxqep"
+      >
+        Search
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

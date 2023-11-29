@@ -1,0 +1,449 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Trusted Neighbour API - V1",
+    "description": "An API to retrieve safe parcel delivery locations.",
+    "version": "v1"
+  },
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "tags": ["Auth"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/debug": {
+      "get": {
+        "tags": ["Debug"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/{name}": {
+      "get": {
+        "tags": ["Debug"],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug/auth": {
+      "get": {
+        "tags": ["DebugAuth"],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/debug/db": {
+      "get": {
+        "tags": ["DebugDb"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/points/search": {
+      "post": {
+        "tags": ["PointSearch"],
+        "summary": "Retrieves delivery points (both internal and external) that match the provided filters.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PointFilterList"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PointFilterList"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PointFilterList"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeliveryPointList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "post": {
+        "tags": ["User"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUser"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUser"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUser"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AuthRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Coords": {
+        "type": "object",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "description": "The latitude component as decimal degrees (between -90 and 90).",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "description": "The longitude component as decimal degrees (between -180 and 180).",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Coordinates of a location."
+      },
+      "DayOfWeek": {
+        "enum": [0, 1, 2, 3, 4, 5, 6],
+        "type": "integer",
+        "format": "int32"
+      },
+      "DaysFilter": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PointFilter"
+          }
+        ],
+        "properties": {
+          "dayOfWeek": {
+            "$ref": "#/components/schemas/DayOfWeek"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeliveryPoint": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "$ref": "#/components/schemas/Coords"
+          },
+          "address": {
+            "type": "string",
+            "description": "The address of this delivery point.",
+            "nullable": true
+          },
+          "hours": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TimeSlot"
+            },
+            "description": "The hours in the week that this delivery point is open for.",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "description": "The internal ID of this delivery point. If @null, this delivery point is external.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "A delivery point with associated metadata."
+      },
+      "DeliveryPointList": {
+        "type": "object",
+        "properties": {
+          "points": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeliveryPoint"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HoursFilter": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PointFilter"
+          }
+        ],
+        "properties": {
+          "startHour": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startMin": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "endHour": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "endMin": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LocationFilter": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PointFilter"
+          }
+        ],
+        "properties": {
+          "coords": {
+            "$ref": "#/components/schemas/Coords"
+          },
+          "rangeKm": {
+            "type": "integer",
+            "description": "The maximum range (in kilometres) that a point can be from the central location\r\nto be included in this filter.",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Filters points by their proximity to a given location. The `filterType` parameter must be `\"location\"`."
+      },
+      "NewUser": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PointFilter": {
+        "required": ["filterType"],
+        "type": "object",
+        "properties": {
+          "filterType": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "discriminator": {
+          "propertyName": "filterType",
+          "mapping": {
+            "location": "#/components/schemas/LocationFilter",
+            "day": "#/components/schemas/DaysFilter",
+            "hours": "#/components/schemas/HoursFilter"
+          }
+        }
+      },
+      "PointFilterList": {
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "#/components/schemas/LocationFilter"
+                },
+                {
+                  "$ref": "#/components/schemas/DaysFilter"
+                },
+                {
+                  "$ref": "#/components/schemas/HoursFilter"
+                }
+              ]
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimeSlot": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "$ref": "#/components/schemas/DayOfWeek"
+          },
+          "startHour": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startMinute": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "endHour": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "endMinute": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false,
+        "description": "A period of time on a day of the week."
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT authorization header using the Bearer scheme.",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  }
+}
